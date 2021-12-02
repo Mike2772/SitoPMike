@@ -1,0 +1,34 @@
+
+        img{
+    
+            padding-top: 5%;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        #header{
+            color: red;
+        }
+        #caca{
+            width: 55%;
+            margin: auto;
+        }
+
+        #displayflex{
+            display: flex;
+        }
+
+        #displaynoflex{
+            display: inline;
+        }
+        
+        #images1{
+            padding-left: 3%;
+            border-left: 6%;
+        }
+
+        #images2{
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
