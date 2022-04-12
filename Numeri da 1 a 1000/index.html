@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    #divv{
+        border: 5px outset red;
+  background-color: black;
+  text-align: center;
+    }
+    </style>
+</head>
+<body>
+    <h4>NUMERI DA 1 A 1000</h4>
+      <div id ="divv"></div>
+    <script id= "NUMERI" type  = "text/javascript">
+        b=document.getElementById("divv");
+        a=1;
+        for(let a=1;a<1000;a++){
+        if(a % 10 == 0){
+            document.write("<span style='color:red;'>"+" "+a + " " +"</span>");
+        
+            }
+            if (a % 2 ==0){
+                document.write("<span style='font-weight:700'>"+" "+a + " " +"</span>");
+        }else {
+            document.write(" "+a+" ");
+        }
+    }
+    </script>
+</body>
+</html>
