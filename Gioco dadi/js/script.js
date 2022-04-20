@@ -1,57 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>DADI GAME</title>
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
+var pulsanteGenera = document.getElementById("genera");
+pulsanteGenera.addEventListener('click',
+function() {
 
-  <h1>DADI GAME</h1>
+  var numero_random_uno = Math.floor((Math.random() * 6) + 1);
+  var numero_random_due = Math.floor((Math.random() * 6) + 1);
 
-  <div class="comandi">
+  console.log(numero_random_uno);
+  console.log(numero_random_due);
 
-    <button id="genera" class="my_btn_one" type="button" name="button">Genera</button>
+  document.getElementById('numerocasuale_uno').innerHTML= numero_random_uno;
+  document.getElementById('numerocasuale_due').innerHTML= numero_random_due;
 
-  </div>
+  if (numero_random_uno > numero_random_due) {
+    document.getElementById("numerocasuale_uno").style.color = "green";
+    document.getElementById("numerocasuale_due").style.color = "red";
+  } else if (numero_random_due > numero_random_uno) {
+    document.getElementById("numerocasuale_uno").style.color = "red";
+    document.getElementById("numerocasuale_due").style.color = "green";
 
-  <div class="regole">
+  } else {
+    document.getElementById("numerocasuale_uno").style.color = "yellow";
+    document.getElementById("numerocasuale_due").style.color = "yellow";
+  }
 
-    <h3><font color="#008000">VITTORIA</font></h3>
-    <h3><font color="#FF0000">SCONFITTA</font></h3>
-    <h3><font color="#ffff00 ">PAREGGIO</font></h3>
-
-  </div>
-
-  <div class="dadi">
-    <div class="locale">
-
-    <h2>Computer:</h2>
-    <div class="dado">
-
-      <div class="lancio">
-        <span id="numerocasuale_uno"></span>
-      </div>
-
-    </div>
-  </div>
-
-    <div class="locale">
-    <h2>Giocatore:</h2>
-    <div class="dado">
-
-      <div class="lancio">
-        <span id="numerocasuale_due"></span>
-      </div>
-
-    </div>
-  </div>
-
-  </div>
-
-  <script src="js/script.js" charset="utf-8"></script>
-
-</body>
-</html>
+}
+);
