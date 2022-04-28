@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frangiamore</title>
+</head>
+<body>
+    <h1> Numeri primi da 1 a 100. </h1>
+<button id="miobottone" onclick="genera()" > clicca per vedere i numeri primi</button>
+<p id="outputArray">i numeri sono </p>
+<script>
+
+function genera(){
+    for(let i=0;i<101;i++){ 
+if(IsPrime(i)){
+    document.write(" "+i);
+   
+}
+    }
+    document.write("  i numeri primi fino a 100 sono 25");
+}
+    function IsPrime(n) {
+                // restituisce true se il numero n è primo cioè ha
+                //come fattori solo 1 e n
+                // restituisce false se il numero n non è primo
+                //cioè ha un numero di fattori > 2
+              
+              let bOut=true;
+                  for(fattore=2;((fattore<=n/2)&& bOut);fattore++)
+                        {
+                           if (n%fattore==0)
+                                    {
+                                        bOut=false;
+                                    }
+                        }
+               return bOut;
+              
+            }
+        
+   
+</script>
+</body>
+</html>
