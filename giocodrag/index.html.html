@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>jQuery example: drag and drop</title>
+        <style>
+            body {
+                font-size: 32px;
+            }
+            
+            #dropzone{
+                top: 150px;
+                width: 200px;
+                height: 200px;
+                background: rgb(0, 0, 0);
+                border: solid 1px;
+            }
+        </style>
+    </head>
+    <body>
+    <div>Sposta la faccina nel rettangolo</div>
+    <img id="winston" src="https://www.kasandbox.org/programming-images/creatures/Winston.png">
+    
+    <div id="dropzone"></div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <!-- Also include jQueryUI -->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+    <script>
+        $("#winston").draggable();
+        $("#dropzone").droppable({
+            drop: function(event, ui) {
+                $(this).css('background', 'rgb(	0,0,255)');
+            },
+            over: function(event, ui) {
+                $(this).css('background', 'black');
+            },
+            out: function(event, ui) {
+                $(this).css('background', 'blue');
+            }
+        });
+    </script>
+    
+    </body>
+</html>
